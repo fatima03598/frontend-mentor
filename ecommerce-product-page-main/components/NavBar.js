@@ -6,6 +6,7 @@ const template = document.createElement("template");
 template.innerHTML = `
     <div class="nav-bar">
         <div class="nav-bar__logo">
+        <slot name="logo"></slot>
         </div>
     </div>
 `;
