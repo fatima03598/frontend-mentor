@@ -1,11 +1,25 @@
 @use './base';
 
 html, body {
-    width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
+    overflow: hidden;
     font: base.$font-stack;
+    
+}
+
+body.desktop {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    overflow: hidden;
+}
+
+
+body.mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow: hidden;
 }
 
 .attribution {

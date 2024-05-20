@@ -1,10 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
 html, body {
-  width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
+  overflow: hidden;
   font: "Kumbh Sans", sans-serif;
+}
+
+body.desktop {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  overflow: hidden;
+}
+
+body.mobile {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  overflow: hidden;
 }
 
 .attribution {

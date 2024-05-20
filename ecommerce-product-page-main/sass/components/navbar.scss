@@ -4,3 +4,30 @@ h1 {
     font-size: 2em;
 
 }
+
+.nav-bar {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    height:5rem;
+    position: relative;
+
+}
+
+.nav-bar__end-items {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar__cart {
+    margin-right: 30px;
+}
+
+.nav-bar__menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
