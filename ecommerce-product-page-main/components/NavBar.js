@@ -1,4 +1,3 @@
-
 const template = document.createElement("template");
 
 template.innerHTML = `
@@ -12,7 +11,6 @@ template.innerHTML = `
           <slot name="logo"></slot>
         </div>
         <div class="nav-bar__menu">
-
         </div>
         <div class="nav-bar__end-items">
           <div class="nav-bar__cart">
@@ -40,20 +38,10 @@ class NavBar extends HTMLElement {
     super();
 
     const menuItems = ["Collections", "Men", "Women", "About", "Contact"];
- 
+
     const shadow = this.attachShadow({ mode: "open" });
 
     shadow.append(template.content.cloneNode(true));
-    
-
-    // this.updateMenuVisibility();
-
-    // window.addEventListener(
-    //   "resize",
-    //   debounce((e) => {
-    //     this.handleWindowResize();
-    //   })
-    // );
 
     this.addMenuItems(menuItems);
   }
@@ -64,7 +52,7 @@ class NavBar extends HTMLElement {
     }
   }
 
-  addMenuItems( menuItems) {
+  addMenuItems(menuItems) {
     const menu = this.shadowRoot.querySelector(".nav-bar__menu");
     menuItems.forEach((item) => {
       const menuItem = document.createElement("div");
@@ -73,18 +61,17 @@ class NavBar extends HTMLElement {
       menu.appendChild(menuItem);
     });
   }
-  
 
   updateMenuVisibility(isMobile) {
     const mobileMenu = this.shadowRoot.querySelector(".nav-bar__menu_mobile");
     const desktopMenu = this.shadowRoot.querySelector(".nav-bar__menu");
 
     if (isMobile) {
-      mobileMenu.style.visibility = "visible";
-      desktopMenu.style.visibility = "hidden";
+      mobileMenu.style.display = "block";
+      desktopMenu.style.display = "none";
     } else {
-      mobileMenu.style.visibility = "hidden";
-      desktopMenu.style.visibility = "visible";
+      mobileMenu.style.display = "none";
+      desktopMenu.style.display = "flex";
     }
   }
 

@@ -9,6 +9,7 @@ h1 {
   flex-wrap: wrap;
   height: 5rem;
   position: relative;
+  border-bottom: 1px solid #E8E7EB;
 }
 
 .nav-bar__end-items {
@@ -17,16 +18,26 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .nav-bar__cart {
   margin-right: 30px;
 }
 
+.nav-bar__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav-bar__menu {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 50%;
+  color: hsl(219, 9%, 45%);
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 /*# sourceMappingURL=navbar.css.map */
