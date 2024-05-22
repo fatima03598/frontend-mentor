@@ -1,6 +1,9 @@
 import { cart } from "./shop.js";
 
 console.log("main.js loaded");
+
+//Main Functions--------------------------------------
+
 const debounce = (func) => {
   let timer;
 
