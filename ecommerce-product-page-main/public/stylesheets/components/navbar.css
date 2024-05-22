@@ -41,15 +41,37 @@ h1 {
 .nav-bar__cart {
   position: relative;
   margin-right: 30px;
+  cursor: pointer;
 }
 
 .nav-bar__cart__popup {
   position: absolute;
-  height: 150px;
+  height: 180px;
   width: 250px;
-  left: -450%;
-  top: 200%;
-  background-color: red;
+  right: -350%;
+  top: 150%;
+  z-index: 80;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  box-shadow: 3px 3px 11px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 3px 3px 11px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 3px 11px rgba(0, 0, 0, 0.2);
+}
+
+.nav-bar__cart__items-num {
+  position: absolute;
+  width: 15px;
+  height: 8px;
+  top: -40%;
+  right: -45%;
+  background-color: hsl(26, 100%, 55%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 39%;
+  padding: 0.2rem;
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-bar__logo {

@@ -1,3 +1,5 @@
+import { cart } from "../shop.js";
+
 const template = document.createElement("template");
 
 template.innerHTML = `
@@ -21,6 +23,7 @@ template.innerHTML = `
         <div class="nav-bar__end-items">
           <div class="nav-bar__cart">
             <slot name="cart"></slot>
+            <div class="nav-bar__cart__items-num">30</div>
             <div class="nav-bar__cart__popup"></div>
           </div>
           <div class="nav-bar__user">
