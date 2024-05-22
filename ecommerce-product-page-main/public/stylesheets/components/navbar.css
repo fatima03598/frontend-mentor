@@ -39,7 +39,17 @@ h1 {
 }
 
 .nav-bar__cart {
+  position: relative;
   margin-right: 30px;
+}
+
+.nav-bar__cart__popup {
+  position: absolute;
+  height: 50px;
+  width: 70px;
+  left: -50%;
+  bottom: -270%;
+  background-color: red;
 }
 
 .nav-bar__logo {
@@ -57,11 +67,16 @@ h1 {
 }
 
 .nav-bar__menu-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
   cursor: pointer;
+  border-bottom: 3px solid transparent;
 }
 
 .nav-bar__menu-item:hover {
-  color: #17191c;
+  color: #0c0c0e;
+  border-bottom: 3px solid hsl(26, 100%, 55%);
 }
 
 .nav-bar__menu_mobile {
@@ -100,6 +115,17 @@ h1 {
   margin: 0.5rem;
   color: hsl(0, 0%, 0%);
   font-weight: 800;
+}
+
+.nav-bar__user ::slotted(img:hover) {
+  border: 2px solid hsl(26, 100%, 55%);
+  border-radius: 50%;
+}
+
+.nav-bar__user ::slotted(img) {
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=navbar.css.map */

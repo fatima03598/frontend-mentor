@@ -21,6 +21,7 @@ template.innerHTML = `
         <div class="nav-bar__end-items">
           <div class="nav-bar__cart">
             <slot name="cart"></slot>
+            <div class="nav-bar__cart__popup"></div>
           </div>
           <div class="nav-bar__user">
             <slot name="user-pic"></slot>
@@ -57,6 +58,9 @@ class NavBar extends HTMLElement {
       const trueValue = newValue === "true";
       this.updateMenuVisibility(trueValue);
       this.mobileMenuMenuSetupEvents(trueValue);
+    } else if (name === "cart-items-number") {
+      console.log("cart items number changed");
+      console.log(newValue);
     }
   }
 
@@ -85,7 +89,6 @@ class NavBar extends HTMLElement {
   }
 
   mobileMenuMenuSetupEvents(isMobile) {
-    console.log("mobile menu setup");
     // hide expanded menu
     const expandedMenu = this.shadowRoot.querySelector(
       ".nav-bar__full_menu_mobile"
